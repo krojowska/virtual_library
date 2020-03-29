@@ -10,7 +10,7 @@ h1
 {
     font-size: 36px;
     font-weight: 400;
-    color: #C0D06F;
+    color: #008080;
     margin: 20px;
 }
 
@@ -20,19 +20,74 @@ h1
     padding: 0;
 }
 
-.jumpers img{
+.jumpers img
+{
     width: 100%;
     height: 100%;
 }
 
-.jumpers p{
+.jumpers p
+{
     margin-bottom: 30px;
 }
 
-.jumpers figcaption{
+.jumpers figcaption
+{
     margin-top: 8px;
 }
 
-.bg-jumpers{
-    background-color: #2CBFA4 !important;
+.bg-jumpers
+{
+    background-color: #008080 !important;
+}
+
+.list-group-item-dark
+{
+    background-color: #373a3d;
+    color: white;
+}
+
+.list-group-item-dark:hover
+{
+    background-color: #008080 !important;
+}
+
+.list-group .active
+{
+    background-color: #008080 !important;
+    cursor: default;
+}
+
+.wpis
+{
+    text-align: justify;
+    font-size: 16px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+.blockquote
+{
+    line-height: 120%;
+}
+
+@media (max-width: 575px)
+{
+    .wpis
+    {
+        margin: 40px 20px;
+        text-align: left;
+        font-size: 15px;
+    }
+    .float-left, .float-right
+    {
+        max-width: 50%;
+    }
+    .blockquote
+    {
+        font-size: 17px;
+    }
+    .list-group
+    {
+        text-align: center;
+    }
 }

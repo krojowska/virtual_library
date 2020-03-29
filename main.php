@@ -17,9 +17,9 @@
     <link rel = "stylesheet" href="css/bootstrap.min.css" type="text/css"/>
     <link rel = "stylesheet" href="strona-glowna.css" type="text/css"/>
     <title>Wirtualna Biblioteka</title>
-    <meta name="description" content="Blog o skokach narciarskich">
-    <meta name="keywords" content="skoki narciarskie, skoczkowie, wyniki">
-    <meta name="author" content="Jan Kowalski">
+    <meta name="description" content="Strona o książkach">
+    <meta name="keywords" content="książki">
+    <meta name="author" content="Karolina Rojowska">
     <meta http-equiv="X-Ua-Compatible" content="IE=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -30,35 +30,38 @@
 <body>
     <header>
         <nav class="navbar navbar-dark bg-jumpers navbar-expand-md">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" width="30" height="30" alt="" class="d-inline-block mr-1 align-bottom"> wb.pl</a>
+            <a class="navbar-brand" href="#"><img src="img/clipart3.png" width="30" height="30" alt="" class="d-inline-block mr-1 align-bottom"> wb.pl</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expended="false" aria-label="przelacznik nawigacji">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainmenu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#"> Start </a>
+                        <a class="nav-link active" href="#"> Strona główna </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expended="false" id="submenu" aria-haspopup="true"> Zawody </a>
-                        <div class="dropdown-menu" aria-labelledby="submenu">
-                            <a class="dropdown-item" href="#"> Terminarz zawodow </a>
-                            <a class="dropdown-item" href="#"> Ranking </a>
-                            <a class="dropdown-item" href="#"> Sylwetki </a>
-                            <a class="dropdown-item" href="#"> skocznie </a>
-                        </div>
+<!--                    <li class="nav-item dropdown">-->
+<!--                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expended="false" id="submenu" aria-haspopup="true"> Zawody </a>-->
+<!--                        <div class="dropdown-menu" aria-labelledby="submenu">-->
+<!--                            <a class="dropdown-item" href="#"> Terminarz zawodow </a>-->
+<!--                            <a class="dropdown-item" href="#"> Ranking </a>-->
+<!--                            <a class="dropdown-item" href="#"> Sylwetki </a>-->
+<!--                            <a class="dropdown-item" href="#"> skocznie </a>-->
+<!--                        </div>-->
+<!--                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Godziny otwarcia </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Historia </a>
+                        <a class="nav-link" href="#"> O bibliotece </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Zdjęcia </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> Wywiady </a>
+                        <a class="nav-link" href="#"> Zasoby </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> Kontakt </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php"> Wyloguj się </a>
                     </li>
                 </ul>
             </div>
@@ -67,7 +70,6 @@
 
         </nav>
     </header>
-<a href="logout.php">Wyloguj sie</a>
 <main>
 
     <section class="jumpers">
@@ -76,8 +78,15 @@
 
             <header>
 
-                <h1>Poznajmy zawodników</h1>
-                <p>W tej sekcji specjalnie dla Was prezentujemy sylwetki zawodników, których znamy z rywalizacji w konkursach pucharu świata oraz olimpijskich. Poznaj osiągnięcia, statystyki, a także ciekawostki na temat najbardziej rozpoznawalnych zawodników!</p>
+                <h1>Wirtualna Biblioteka</h1>
+                <blockquote class="blockquote">
+                    Każda znajdująca się tu książka, każdy tom, posiadają własną duszę. I to zarówno duszę tego, kto daną książkę napisał, jak i dusze tych, którzy tę książkę przeczytali i tak mocno ją przeżyli, że zawładnęła ich wyobraźnią.
+                    <footer class="blockquote-footer">Carlos Ruiz Zafón</footer>
+                </blockquote>
+                <blockquote class="blockquote">
+                    Przyzwyczaić się do czytania książek - to zbudować sobie schron przed większością przykrości życia codziennego.
+                    <footer class="blockquote-footer">William Somerset Maugham</footer>
+                </blockquote>
 
             </header>
 
@@ -86,8 +95,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/malysz.jpg" alt="Adam Małysz"></a>
-                        <figcaption>Adam Małysz</figcaption>
+                        <a href="#"><img src="img/mroz.jpg" alt="Remigiusz Mróz"></a>
+                        <figcaption>Remigiusz Mróz</figcaption>
                     </figure>
 
                 </div>
@@ -95,8 +104,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/stoch.jpg" alt="Kamil Stoch"></a>
-                        <figcaption>Kamil Stoch</figcaption>
+                        <a href="#"><img src="img/drzwi.jpg" alt="B.A. Paris"></a>
+                        <figcaption>B.A. Paris</figcaption>
                     </figure>
 
                 </div>
@@ -104,8 +113,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/ahonen.jpg" alt="Janne Ahonen"></a>
-                        <figcaption>Janne Ahonen</figcaption>
+                        <a href="#"><img src="img/king.jpg" alt="Stephen King"></a>
+                        <figcaption>Stephen King</figcaption>
                     </figure>
 
                 </div>
@@ -113,8 +122,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/schmitt.jpg" alt="Martin Schmitt"></a>
-                        <figcaption>Martin Schmitt</figcaption>
+                        <a href="#"><img src="img/einstein.jpg" alt="Stephen Hawking"></a>
+                        <figcaption>Stephen Hawking</figcaption>
                     </figure>
 
                 </div>
@@ -122,8 +131,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/kubacki.jpg" alt="Dawid Kubacki"></a>
-                        <figcaption>Dawid Kubacki</figcaption>
+                        <a href="#"><img src="img/opuszcze.jpg" alt="Michelle Richmond"></a>
+                        <figcaption>Michelle Richmond</figcaption>
                     </figure>
 
                 </div>
@@ -131,8 +140,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/zyla.jpg" alt="Piotr Żyła"></a>
-                        <figcaption>Piotr Żyła</figcaption>
+                        <a href="#"><img src="img/trzynascie.jpg" alt="Steve Cavanagh"></a>
+                        <figcaption>Steve Cavanagh</figcaption>
                     </figure>
 
                 </div>
@@ -140,8 +149,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/kranjec.jpg" alt="Robert Kranjec"></a>
-                        <figcaption>Robert Kranjec</figcaption>
+                        <a href="#"><img src="img/zjawa.jpg" alt="Max Czornyj"></a>
+                        <figcaption>Max Czornyj</figcaption>
                     </figure>
 
                 </div>
@@ -149,8 +158,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/schlierenzauer.jpg" alt="Gregor Schlierenzauer"></a>
-                        <figcaption>Gregor Schlierenzauer</figcaption>
+                        <a href="#"><img src="img/latarnik.jpg" alt="Camilla Lackberg"></a>
+                        <figcaption>Camilla Lackberg</figcaption>
                     </figure>
 
                 </div>
@@ -158,8 +167,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/kot.jpg" alt="Maciej Kot"></a>
-                        <figcaption>Maciej Kot</figcaption>
+                        <a href="#"><img src="img/dziewczyna.jpg" alt="Paula Hawkins"></a>
+                        <figcaption>Paula Hawkins</figcaption>
                     </figure>
 
                 </div>
@@ -167,8 +176,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/kraft.jpg" alt="Stefan Kraft"></a>
-                        <figcaption>Stefan Kraft</figcaption>
+                        <a href="#"><img src="img/wiedzmin.jpg" alt="Andrzej Sapkowski"></a>
+                        <figcaption>Andrzej Sapkowski</figcaption>
                     </figure>
 
                 </div>
@@ -176,8 +185,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/ammann.jpg" alt="Simon Ammann"></a>
-                        <figcaption>Simon Ammann</figcaption>
+                        <a href="#"><img src="img/coben.jpg" alt="Harlan Coben"></a>
+                        <figcaption>Harlan Coben</figcaption>
                     </figure>
 
                 </div>
@@ -185,8 +194,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/kasai.jpg" alt="Noriaki Kasai"></a>
-                        <figcaption>Noriaki Kasai</figcaption>
+                        <a href="#"><img src="img/dziecko.jpg" alt="Lucinda Berry"></a>
+                        <figcaption>Lucinda Berry</figcaption>
                     </figure>
 
                 </div>

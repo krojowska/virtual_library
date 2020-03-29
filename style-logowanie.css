@@ -6,7 +6,7 @@ body{
     text-align: center;
 }
 a:link, a:visited{
-   color: #2CBFA4;
+   color: #008080;
     text-decoration: underline;
 }
 
@@ -20,7 +20,7 @@ a:link, a:visited{
     border-color: #CED7E0;
 }
 .btn:hover{
-    background-color: #2CBFA4;
+    background-color: #008080;
     color:white;
 }
 
