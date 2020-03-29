@@ -1,0 +1,26 @@
+body{
+    background-color: #222930;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+a:link, a:visited{
+   color: #2CBFA4;
+    text-decoration: underline;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 20px 50px;
+    font-size: 16px;
+    background-color: #161B20;
+    color:#CED7E0;
+    font-weight: bold;
+    border-color: #CED7E0;
+}
+.btn:hover{
+    background-color: #2CBFA4;
+    color:white;
+}
+
