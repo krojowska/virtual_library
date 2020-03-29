@@ -29,8 +29,42 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark bg-primary">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" width="30" height="30" alt="" class="d-inline-block"> wb.pl<a>
+        <nav class="navbar navbar-dark bg-jumpers navbar-expand-md">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" width="30" height="30" alt="" class="d-inline-block mr-1 align-bottom"> wb.pl</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expended="false" aria-label="przelacznik nawigacji">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"> Start </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expended="false" id="submenu" aria-haspopup="true"> Zawody </a>
+                        <div class="dropdown-menu" aria-labelledby="submenu">
+                            <a class="dropdown-item" href="#"> Terminarz zawodow </a>
+                            <a class="dropdown-item" href="#"> Ranking </a>
+                            <a class="dropdown-item" href="#"> Sylwetki </a>
+                            <a class="dropdown-item" href="#"> skocznie </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Historia </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Zdjęcia </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Wywiady </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Kontakt </a>
+                    </li>
+                </ul>
+            </div>
+
+
+
         </nav>
     </header>
 <a href="logout.php">Wyloguj sie</a>
