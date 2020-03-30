@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse" id="mainmenu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#"> Strona główna </a>
+                        <a class="nav-link active" href="main.php"> Strona główna </a>
                     </li>
 <!--                    <li class="nav-item dropdown">-->
 <!--                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expended="false" id="submenu" aria-haspopup="true"> Zawody </a>-->
@@ -49,13 +49,16 @@
 <!--                        </div>-->
 <!--                    </li>-->
                     <li class="nav-item">
+                        <a class="nav-link" href="#"> Moje konto </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#"> Godziny otwarcia </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> O bibliotece </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Zasoby </a>
+                        <a class="nav-link" href="zasoby.php"> Zasoby </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> Kontakt </a>
@@ -65,9 +68,6 @@
                     </li>
                 </ul>
             </div>
-
-
-
         </nav>
     </header>
 <main>
@@ -95,7 +95,7 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/mroz.jpg" alt="Remigiusz Mróz"></a>
+                        <a href="wpis.php"><img src="img/mroz.jpg" alt="Remigiusz Mróz"></a>
                         <figcaption>Remigiusz Mróz</figcaption>
                     </figure>
 
@@ -122,8 +122,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/einstein.jpg" alt="Stephen Hawking"></a>
-                        <figcaption>Stephen Hawking</figcaption>
+                        <a href="#"><img src="img/tron.jpg" alt="George R. R. Martin"></a>
+                        <figcaption>George R. R. Martin</figcaption>
                     </figure>
 
                 </div>
@@ -131,8 +131,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/opuszcze.jpg" alt="Michelle Richmond"></a>
-                        <figcaption>Michelle Richmond</figcaption>
+                        <a href="#"><img src="img/riochan.jpg" alt="Rick Riochan""></a>
+                        <figcaption>Rick Riochan</figcaption>
                     </figure>
 
                 </div>
@@ -140,8 +140,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/trzynascie.jpg" alt="Steve Cavanagh"></a>
-                        <figcaption>Steve Cavanagh</figcaption>
+                        <a href="#"><img src="img/roth.jpg" alt="Veronica Roth"></a>
+                        <figcaption>Veronica Roth</figcaption>
                     </figure>
 
                 </div>
@@ -149,8 +149,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/zjawa.jpg" alt="Max Czornyj"></a>
-                        <figcaption>Max Czornyj</figcaption>
+                        <a href="#"><img src="img/potter.jpg" alt="J.K. Rowling"></a>
+                        <figcaption>J.K. Rowling</figcaption>
                     </figure>
 
                 </div>
@@ -194,8 +194,8 @@
                 <div class="col-sm-6 col-md-4">
 
                     <figure>
-                        <a href="#"><img src="img/dziecko.jpg" alt="Lucinda Berry"></a>
-                        <figcaption>Lucinda Berry</figcaption>
+                        <a href="#"><img src="img/bonda.jpg" alt="Katarzyna Bonda"></a>
+                        <figcaption>Katarzyna Bonda</figcaption>
                     </figure>
 
                 </div>

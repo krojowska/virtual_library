@@ -37,31 +37,34 @@ if(!isset($_SESSION['zalogowany']))
         <div class="collapse navbar-collapse" id="mainmenu">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Start </a>
+                    <a class="nav-link" href="main.php"> Strona główna </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expended="false" id="submenu" aria-haspopup="true"> Zawody </a>
-                    <div class="dropdown-menu" aria-labelledby="submenu">
-                        <a class="dropdown-item" href="#"> Terminarz zawodow </a>
-                        <a class="dropdown-item" href="#"> Ranking </a>
-                        <a class="dropdown-item" href="#"> Sylwetki </a>
-                        <a class="dropdown-item" href="#"> skocznie </a>
-                    </div>
+<!--                <li class="nav-item dropdown">-->
+<!--                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expended="false" id="submenu" aria-haspopup="true"> Zawody </a>-->
+<!--                    <div class="dropdown-menu" aria-labelledby="submenu">-->
+<!--                        <a class="dropdown-item" href="#"> Terminarz zawodow </a>-->
+<!--                        <a class="dropdown-item" href="#"> Ranking </a>-->
+<!--                        <a class="dropdown-item" href="#"> Sylwetki </a>-->
+<!--                        <a class="dropdown-item" href="#"> skocznie </a>-->
+<!--                    </div>-->
+<!--                </li>-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Moje konto </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Historia </a>
+                    <a class="nav-link" href="#"> Godziny otwarcia </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Zdjęcia </a>
+                    <a class="nav-link" href="#"> O bibliotece </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Wywiady </a>
+                    <a class="nav-link" href="#"> Zasoby </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"> Kontakt </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php"> Wyloguj sie </a>
+                    <a class="nav-link" href="logout.php"> Wyloguj się </a>
                 </li>
             </ul>
         </div>
@@ -71,12 +74,7 @@ if(!isset($_SESSION['zalogowany']))
     <article>
         <div class="container">
             <div class="row">
-                <aside class="col-12 text-center my-5">
-                    <a href="https://pl.wikipedia.org/wiki/Kamil_Stcch" target="_blank">
-                        <img class="img-fluid" src="img/wikipedia.jpg" alt="Życiorys Kamila Stocha">
-                    </a>
-                </aside>
-                <div class="col-lg-8 bg-white text-dark wpis">
+                <div class="col-lg-8 bg-white text-dark wpis mt-4">
                     <header><h1 class="h2 font-weight-bold text-uppercase ml-0 mb-4 text-center text-md-left">Remigiusz Mróz</h1></header>
                     <p>Polski prawnik i pisarz, autor powieści oraz cyklu publicystycznego „Kurs pisania”, laureat Nagrody Czytelników Wielkiego Kalibru z 2016 roku za powieść pt. Kasacja. W 2017 roku ujawnił się jako Ove Løgmansbø, autor kolejnych trzech powieści.</p>
 
@@ -106,7 +104,7 @@ if(!isset($_SESSION['zalogowany']))
                     <p>Obecnie rezyduje w niewielkiej miejscowości pod Opolem, której nazwa wykuta została we współczesnym kamieniu w języku polskim i niemieckim. Cierpi na permanentny writing blitz, skutkiem którego jest 30 ukończonych powieści, a kolejne dobijają się z podświadomości… dobijają… i dobijają…</p>
                 </div>
                 <aside class="col-lg-4">
-                    <img class="img-thumbnail" src="img/remekmroz.jpg" alt="Remigiusz Mróz">
+                    <img class="img-thumbnail mt-4" src="img/remekmroz.jpg" alt="Remigiusz Mróz">
                     <h3 class="h4 my-4">Popularni pisarze</h3>
                     <ul class="list-group">
                         <a ref="#" class="list-group-item list-group-item-dark list-group-item-action active">Remigiusz Mróz</a>
@@ -123,19 +121,15 @@ if(!isset($_SESSION['zalogowany']))
                         <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Noriaki Kasai</a>
                     </ul>
 
-                    <h3 class="h4 my-"3">Mapa serwisu</h3>
+                    <h3 class="h4 my-3">Mapa serwisu</h3>
                     <ol class="list-unstyled ml-4">
+                        <li>Moje konto</li>
                         <li>Strona główna</li>
-                        <ul>
-                            <li>Terminarz zawodów</li>
-                            <li>Ranking Pucharu Świata</li>
-                            <li>Sylwetki zawodników</li>
-                            <li>Skocznie narciarskie</li>
-                        </ul>
-                        <li>Historia</li>
-                        <li>Zdjęcia</li>
-                        <li>Wywiady</li>
+                        <li>Godziny otwarcia</li>
+                        <li>O bibliotece</li>
+                        <li>Zasoby</li>
                         <li>Kontakt</li>
+                        <li>Wyloguj się</li>
                     </ol>
                 </aside>
             </div>
