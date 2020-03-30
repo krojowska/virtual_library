@@ -49,7 +49,7 @@
 <!--                        </div>-->
 <!--                    </li>-->
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Moje konto </a>
+                        <a class="nav-link" href="moje-konto.php"> Moje konto </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> Godziny otwarcia </a>
