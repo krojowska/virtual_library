@@ -5,15 +5,6 @@ if(!isset($_SESSION['zalogowany']))
     header('Location: index.php');
     exit();
 }
-require_once "connect.php";
-
-$polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
-
-if($polaczenie->connect_errno!=0)
-{
-    echo "Error:".$polaczenie->connect_errno;
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -38,7 +29,7 @@ if($polaczenie->connect_errno!=0)
 
 <body>
 <header>
-    <nav class="navbar navbar-dark bg-jumpers navbar-expand-md mb-4">
+    <nav class="navbar navbar-dark bg-jumpers navbar-expand-md">
         <a class="navbar-brand" href="#"><img src="img/clipart3.png" width="30" height="30" alt="" class="d-inline-block mr-1 align-bottom"> wb.pl</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expended="false" aria-label="przelacznik nawigacji">
             <span class="navbar-toggler-icon"></span>
@@ -46,7 +37,7 @@ if($polaczenie->connect_errno!=0)
         <div class="collapse navbar-collapse" id="mainmenu">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="main.php"> Strona główna </a>
+                    <a class="nav-link " href="main.php"> Strona główna </a>
                 </li>
                 <!--                    <li class="nav-item dropdown">-->
                 <!--                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expended="false" id="submenu" aria-haspopup="true"> Zawody </a>-->
@@ -67,10 +58,10 @@ if($polaczenie->connect_errno!=0)
                     <a class="nav-link" href="o-bibliotece.php"> O bibliotece </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="zasoby.php"> Zasoby </a>
+                    <a class="nav-link" href="zasoby.php"> Zasoby </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="kontakt.php"> Kontakt </a>
+                    <a class="nav-link active" href="kontakt.php"> Kontakt </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="logout.php"> Wyloguj się </a>
@@ -80,35 +71,18 @@ if($polaczenie->connect_errno!=0)
     </nav>
 </header>
 <main>
-<?php
-    $sql = "SELECT id, tytul, autor,  datawydania  FROM zasoby ORDER BY id";
+    <div class="text-center">
+        <h1>al. Mickiewicza 30, 30-059 Kraków, Pawilon U-1</h1><br/>
+        <h2 class="h5 font-weight-bold">Dyrektor:  dr Jerzy Krawczyk</h2>
+        tel.: 12 617 32 07, e-mail: jerzy.krawczyk@bg.agh.edu.pl
+        <h2 class="h5 mt-4 font-weight-bold">Za-ca Dyrektora: mgr Maria Garczyńska</h2>
+        tel.: 12 617 32 08, e-mail: maria.garczynska@bg.agh.edu.pl
+        <h2 class="h5 mt-4 font-weight-bold">Sekretariat</h2>
+        tel.: 12 617 32 08, e-mail: bgagh@bg.agh.edu.pl
+        <h2 class="h5 mt-4 font-weight-bold">Czytelnia Główna</h2>
+        tel.: 12 617 40 03, e-mail: udo@bg.agh.edu.pl
+    </div>
 
-    echo '<table cellspacing="5" cellpadding="5" style="border: 3px solid white; text-align: center"; align="center";>
-        <tr style="background-color: #2CBFA4">
-            <td style="border: 3px solid white;"> </td>
-            <td style="border: 3px solid white;">Tytuł</td>
-            <td style="border: 3px solid white;">Autor</td>
-            <td style="border: 3px solid white;">Data wydania</td>
-        </tr>';
-
-        if ($result = $polaczenie->query($sql)) {
-            while ($row = $result->fetch_assoc()) {
-                $id = $row["id"];
-                $tytul = $row["tytul"];
-                $autor = $row["autor"];
-                $datawydania = $row["datawydania"];
-
-                echo '<tr>
-            <td style="border: 3px solid white;">' . $id . '</td>
-            <td style="border: 3px solid white;">' . $tytul . '</td>
-            <td style="border: 3px solid white;">' . $autor . '</td>
-            <td style="border: 3px solid white;">' . $datawydania . '</td>
-        </tr>';
-            }
-            $result->free();
-        }
-
-?>
 </main>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

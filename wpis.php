@@ -49,19 +49,19 @@ if(!isset($_SESSION['zalogowany']))
 <!--                    </div>-->
 <!--                </li>-->
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Moje konto </a>
+                    <a class="nav-link" href="moje-konto.php"> Moje konto </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Godziny otwarcia </a>
+                    <a class="nav-link" href="godziny-otwarcia.php"> Godziny otwarcia </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> O bibliotece </a>
+                    <a class="nav-link" href="o-bibliotece.php"> O bibliotece </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Zasoby </a>
+                    <a class="nav-link" href="zasoby.php"> Zasoby </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Kontakt </a>
+                    <a class="nav-link" href="kontakt.php"> Kontakt </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="logout.php"> Wyloguj się </a>

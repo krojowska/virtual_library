@@ -61,16 +61,16 @@ if($polaczenie->connect_errno!=0)
                     <a class="nav-link active" href="moje-konto.php"> Moje konto </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Godziny otwarcia </a>
+                    <a class="nav-link" href="godziny-otwarcia.php"> Godziny otwarcia </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> O bibliotece </a>
+                    <a class="nav-link" href="o-bibliotece.php"> O bibliotece </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="zasoby.php"> Zasoby </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Kontakt </a>
+                    <a class="nav-link" href="kontakt.php"> Kontakt </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="logout.php"> Wyloguj się </a>
@@ -84,7 +84,7 @@ if($polaczenie->connect_errno!=0)
     $sql = "SELECT idksiazki, datawypozyczenia,  datazwrotu  FROM wypozyczenia ORDER BY id";
 
     echo '<table cellspacing="5" cellpadding="5" style="border: 3px solid white; text-align: center"; align="center";>
-        <tr style="background-color: #008080">
+        <tr style="background-color: #2CBFA4">
             <td style="border: 3px solid white;">Id książki</td>
             <td style="border: 3px solid white;">Data wypożyczenia</td>
             <td style="border: 3px solid white;">Data zwrotu</td>

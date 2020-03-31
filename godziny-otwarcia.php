@@ -5,15 +5,6 @@ if(!isset($_SESSION['zalogowany']))
     header('Location: index.php');
     exit();
 }
-require_once "connect.php";
-
-$polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
-
-if($polaczenie->connect_errno!=0)
-{
-    echo "Error:".$polaczenie->connect_errno;
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -38,7 +29,7 @@ if($polaczenie->connect_errno!=0)
 
 <body>
 <header>
-    <nav class="navbar navbar-dark bg-jumpers navbar-expand-md mb-4">
+    <nav class="navbar navbar-dark bg-jumpers navbar-expand-md">
         <a class="navbar-brand" href="#"><img src="img/clipart3.png" width="30" height="30" alt="" class="d-inline-block mr-1 align-bottom"> wb.pl</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expended="false" aria-label="przelacznik nawigacji">
             <span class="navbar-toggler-icon"></span>
@@ -46,7 +37,7 @@ if($polaczenie->connect_errno!=0)
         <div class="collapse navbar-collapse" id="mainmenu">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="main.php"> Strona główna </a>
+                    <a class="nav-link " href="main.php"> Strona główna </a>
                 </li>
                 <!--                    <li class="nav-item dropdown">-->
                 <!--                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expended="false" id="submenu" aria-haspopup="true"> Zawody </a>-->
@@ -61,13 +52,13 @@ if($polaczenie->connect_errno!=0)
                     <a class="nav-link" href="moje-konto.php"> Moje konto </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="godziny-otwarcia.php"> Godziny otwarcia </a>
+                    <a class="nav-link active" href="godziny-otwarcia.php"> Godziny otwarcia </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="o-bibliotece.php"> O bibliotece </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="zasoby.php"> Zasoby </a>
+                    <a class="nav-link" href="zasoby.php"> Zasoby </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="kontakt.php"> Kontakt </a>
@@ -80,35 +71,16 @@ if($polaczenie->connect_errno!=0)
     </nav>
 </header>
 <main>
-<?php
-    $sql = "SELECT id, tytul, autor,  datawydania  FROM zasoby ORDER BY id";
+    <div class="text-center">
+        <h1>Godziny otwarcia</h1><br/>
+        <h2 class="h5 font-weight-bold">Wypożyczalnia i Strefa Wolnego Dostępu</h2>
+        poniedziałek - piątek 9.00 - 18.00, sobota 9.00 - 15.00
+        <h2 class="h5 mt-4 font-weight-bold">Czytelnia Główna</h2>
+        poniedziałek - piątek 9.00 - 19.00, sobota 9.00 - 16.00<br/>
+        <h2 class="h5 mt-4 font-weight-bold">Czytelnia Oddziału Informacji Naukowej</h2>
+        poniedziałek - piątek 8.00 - 18.00, sobota 8.00 - 15.00
+    </div>
 
-    echo '<table cellspacing="5" cellpadding="5" style="border: 3px solid white; text-align: center"; align="center";>
-        <tr style="background-color: #2CBFA4">
-            <td style="border: 3px solid white;"> </td>
-            <td style="border: 3px solid white;">Tytuł</td>
-            <td style="border: 3px solid white;">Autor</td>
-            <td style="border: 3px solid white;">Data wydania</td>
-        </tr>';
-
-        if ($result = $polaczenie->query($sql)) {
-            while ($row = $result->fetch_assoc()) {
-                $id = $row["id"];
-                $tytul = $row["tytul"];
-                $autor = $row["autor"];
-                $datawydania = $row["datawydania"];
-
-                echo '<tr>
-            <td style="border: 3px solid white;">' . $id . '</td>
-            <td style="border: 3px solid white;">' . $tytul . '</td>
-            <td style="border: 3px solid white;">' . $autor . '</td>
-            <td style="border: 3px solid white;">' . $datawydania . '</td>
-        </tr>';
-            }
-            $result->free();
-        }
-
-?>
 </main>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

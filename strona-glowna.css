@@ -1,6 +1,6 @@
 body
 {
-    background-color: #2F3336;
+    background-color: #222930;
     color: #efefef;
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
@@ -10,8 +10,13 @@ h1
 {
     font-size: 36px;
     font-weight: 400;
-    color: #008080;
+    color: #2CBFA4;
     margin: 20px;
+}
+
+.color
+{
+    color: #2CBFA4;
 }
 
 .jumpers
@@ -38,23 +43,23 @@ h1
 
 .bg-jumpers
 {
-    background-color: #008080 !important;
+    background-color: #2CBFA4 !important;
 }
 
 .list-group-item-dark
 {
-    background-color: #373a3d;
+    background-color: #222930;
     color: white;
 }
 
 .list-group-item-dark:hover
 {
-    background-color: #008080 !important;
+    background-color: #2CBFA4 !important;
 }
 
 .list-group .active
 {
-    background-color: #008080 !important;
+    background-color: #2CBFA4 !important;
     cursor: default;
 }
 
