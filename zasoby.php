@@ -58,7 +58,7 @@ if($polaczenie->connect_errno!=0)
                 <!--                        </div>-->
                 <!--                    </li>-->
                 <li class="nav-item">
-                    <a class="nav-link" href="moje-konto.php"> Moje konto </a>
+                    <a class="nav-link" href="opinie.php"> Opinie </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="godziny-otwarcia.php"> Godziny otwarcia </a>
@@ -80,8 +80,18 @@ if($polaczenie->connect_errno!=0)
     </nav>
 </header>
 <main>
-<?php
-    $sql = "SELECT id, tytul, autor,  datawydania  FROM zasoby ORDER BY id";
+    <div class="container">
+        <div class="row">
+            <input class="przycisk col-sm-4 col-md-4 mb-5" type=button onClick="parent.location='http://localhost/virtuallibrary/dodaj-ksiazke.php'" value='Dodaj książkę'><br/><br/>
+            <input class="przycisk col-sm-4 col-md-4 mb-5" type=button onClick="parent.location='http://localhost/virtuallibrary/edytuj-ksiazke.php'" value='Edytuj książkę'><br/><br/>
+            <input class="przycisk col-sm-4 col-md-4 mb-5" type=button onClick="parent.location='http://localhost/virtuallibrary/usun-ksiazke.php'" value='Usuń książkę'><br/><br/>
+
+        </div>
+
+    </div>
+
+    <?php
+    $sql = "SELECT id, tytul, autor,  datawydania, iloscsztuk  FROM zasoby ORDER BY id";
 
     echo '<table cellspacing="5" cellpadding="5" style="border: 3px solid white; text-align: center"; align="center";>
         <tr style="background-color: #2CBFA4">
@@ -89,26 +99,32 @@ if($polaczenie->connect_errno!=0)
             <td style="border: 3px solid white;">Tytuł</td>
             <td style="border: 3px solid white;">Autor</td>
             <td style="border: 3px solid white;">Data wydania</td>
+            <td style="border: 3px solid white;">Dostępne egzemplarze</td>
         </tr>';
 
-        if ($result = $polaczenie->query($sql)) {
-            while ($row = $result->fetch_assoc()) {
-                $id = $row["id"];
-                $tytul = $row["tytul"];
-                $autor = $row["autor"];
-                $datawydania = $row["datawydania"];
+    if ($result = $polaczenie->query($sql)) {
+        while ($row = $result->fetch_assoc()) {
+            $id = $row["id"];
+            $tytul = $row["tytul"];
+            $autor = $row["autor"];
+            $datawydania = $row["datawydania"];
+            $iloscsztuk = $row["iloscsztuk"];
 
-                echo '<tr>
+            echo '<tr>
             <td style="border: 3px solid white;">' . $id . '</td>
             <td style="border: 3px solid white;">' . $tytul . '</td>
             <td style="border: 3px solid white;">' . $autor . '</td>
             <td style="border: 3px solid white;">' . $datawydania . '</td>
+            <td style="border: 3px solid white;">' . $iloscsztuk . '</td>
+          
         </tr>';
-            }
-            $result->free();
         }
+        $result->free();
+    }
 
-?>
+    ?>
+
+
 </main>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

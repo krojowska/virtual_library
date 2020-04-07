@@ -30,7 +30,7 @@ if(!isset($_SESSION['zalogowany']))
 <body>
 <header>
     <nav class="navbar navbar-dark bg-jumpers navbar-expand-md">
-        <a class="navbar-brand" href="#"><img src="img/logo.png" width="30" height="30" alt="" class="d-inline-block mr-1 align-bottom"> wb.pl</a>
+        <a class="navbar-brand" href="#"><img src="img/clipart3.png" width="30" height="30" alt="" class="d-inline-block mr-1 align-bottom"> wb.pl</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expended="false" aria-label="przelacznik nawigacji">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,7 +49,7 @@ if(!isset($_SESSION['zalogowany']))
 <!--                    </div>-->
 <!--                </li>-->
                 <li class="nav-item">
-                    <a class="nav-link" href="moje-konto.php"> Moje konto </a>
+                    <a class="nav-link" href="opinie.php"> Opinie </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="godziny-otwarcia.php"> Godziny otwarcia </a>
@@ -108,17 +108,17 @@ if(!isset($_SESSION['zalogowany']))
                     <h3 class="h4 my-4">Popularni pisarze</h3>
                     <ul class="list-group">
                         <a ref="#" class="list-group-item list-group-item-dark list-group-item-action active">Remigiusz Mróz</a>
+                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">B.A. Paris</a>
                         <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Stephen King</a>
-                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Janne Ahonen</a>
-                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Martin Schmitt</a>
-                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Dawid Kubacki</a>
-                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Piotr Żyła</a>
-                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Robert Kranjec</a>
-                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Gregor Schlierenzauer</a>
-                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Maciej Kot</a>
-                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Stefan Kraft</a>
-                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Simon Ammann</a>
-                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Noriaki Kasai</a>
+                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">George R.R. Martin</a>
+                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Rick Riochan</a>
+                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Veronica Roth</a>
+                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">J.K Rowling</a>
+                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Camilla Lackberg</a>
+                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Paula Hawkins</a>
+                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Andrzej Sapkowski</a>
+                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Harlan Coben</a>
+                        <a ref="#" class="list-group-item list-group-item-dark list-group-item-action">Katarzyna Bonda</a>
                     </ul>
 
                     <h3 class="h4 my-3">Mapa serwisu</h3>

@@ -5,6 +5,15 @@ if(!isset($_SESSION['zalogowany']))
     header('Location: index.php');
     exit();
 }
+require_once "connect.php";
+
+$polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
+
+if($polaczenie->connect_errno!=0)
+{
+    echo "Error:".$polaczenie->connect_errno;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -29,7 +38,7 @@ if(!isset($_SESSION['zalogowany']))
 
 <body>
 <header>
-    <nav class="navbar navbar-dark bg-jumpers navbar-expand-md">
+    <nav class="navbar navbar-dark bg-jumpers navbar-expand-md mb-4">
         <a class="navbar-brand" href="#"><img src="img/clipart3.png" width="30" height="30" alt="" class="d-inline-block mr-1 align-bottom"> wb.pl</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expended="false" aria-label="przelacznik nawigacji">
             <span class="navbar-toggler-icon"></span>
@@ -37,22 +46,13 @@ if(!isset($_SESSION['zalogowany']))
         <div class="collapse navbar-collapse" id="mainmenu">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link " href="main.php"> Strona główna </a>
-                </li>
-                <!--                    <li class="nav-item dropdown">-->
-                <!--                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expended="false" id="submenu" aria-haspopup="true"> Zawody </a>-->
-                <!--                        <div class="dropdown-menu" aria-labelledby="submenu">-->
-                <!--                            <a class="dropdown-item" href="#"> Terminarz zawodow </a>-->
-                <!--                            <a class="dropdown-item" href="#"> Ranking </a>-->
-                <!--                            <a class="dropdown-item" href="#"> Sylwetki </a>-->
-                <!--                            <a class="dropdown-item" href="#"> skocznie </a>-->
-                <!--                        </div>-->
-                <!--                    </li>-->
-                <li class="nav-item">
-                    <a class="nav-link" href="opinie.php"> Opinie </a>
+                    <a class="nav-link" href="main.php"> Strona główna </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="godziny-otwarcia.php"> Godziny otwarcia </a>
+                    <a class="nav-link" href="opinie.php"> Moje konto </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="godziny-otwarcia.php"> Godziny otwarcia </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="o-bibliotece.php"> O bibliotece </a>
@@ -71,15 +71,14 @@ if(!isset($_SESSION['zalogowany']))
     </nav>
 </header>
 <main>
-    <div class="text-center">
-        <h1>Godziny otwarcia</h1><br/>
-        <h2 class="h5 font-weight-bold">Wypożyczalnia i Strefa Wolnego Dostępu</h2>
-        poniedziałek - piątek 9.00 - 18.00, sobota 9.00 - 15.00
-        <h2 class="h5 mt-4 font-weight-bold">Czytelnia Główna</h2>
-        poniedziałek - piątek 9.00 - 19.00, sobota 9.00 - 16.00<br/>
-        <h2 class="h5 mt-4 font-weight-bold">Czytelnia Oddziału Informacji Naukowej</h2>
-        poniedziałek - piątek 8.00 - 18.00, sobota 8.00 - 15.00
-    </div>
+
+
+    <h1 class="text-center" style="color:white">Usuń <span style="color: #2CBFA4;">książkę</span></h1>
+    <br/>
+    <form class="text-center" action="usuwanie.php" method="post">
+        Id: <br/> <input type="text" name="id"/> <br/><br/>
+        <input class="przycisk" type="submit" value="Usuń"/>
+    </form>
 
 </main>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

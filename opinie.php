@@ -58,7 +58,7 @@ if($polaczenie->connect_errno!=0)
                 <!--                        </div>-->
                 <!--                    </li>-->
                 <li class="nav-item">
-                    <a class="nav-link active" href="moje-konto.php"> Moje konto </a>
+                    <a class="nav-link active" href="opinie.php"> Opinie </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="godziny-otwarcia.php"> Godziny otwarcia </a>
@@ -80,31 +80,21 @@ if($polaczenie->connect_errno!=0)
     </nav>
 </header>
 <main>
+    <form class="text-center" action="post-comment.php" method="POST">
+        <input type="text" name="name" placeholder="Your nick"><br/><br/>
+        <textarea name="comment" cols="50" rows="2" placeholder="Enter a comment"></textarea><br/><br/>
+        <input class="przycisk" type="submit" value="Comment">
+    </form>
+
     <?php
-    $sql = "SELECT idksiazki, datawypozyczenia,  datazwrotu  FROM wypozyczenia ORDER BY id";
-
-    echo '<table cellspacing="5" cellpadding="5" style="border: 3px solid white; text-align: center"; align="center";>
-        <tr style="background-color: #2CBFA4">
-            <td style="border: 3px solid white;">Id książki</td>
-            <td style="border: 3px solid white;">Data wypożyczenia</td>
-            <td style="border: 3px solid white;">Data zwrotu</td>
-        </tr>';
-
-    if ($result = $polaczenie->query($sql)) {
-        while ($row = $result->fetch_assoc()) {
-            $idksiazki = $row["idksiazki"];
-            $datawypozyczenia = $row["datawypozyczenia"];
-            $datazwrotu = $row["datazwrotu"];
-
-            echo '<tr>
-            <td style="border: 3px solid white;">' . $idksiazki . '</td>
-            <td style="border: 3px solid white;">' . $datawypozyczenia . '</td>
-            <td style="border: 3px solid white;">' . $datazwrotu . '</td>
-        </tr>';
-        }
-        $result->free();
+    require_once "connect.php";
+    $polaczenie = new mysqli($host, $db_user, $db_password, $db_name);
+    $find_comments= $polaczenie->query("SELECT * FROM opinie");
+    while($row = $find_comments->fetch_assoc()){
+        $comment_name=$row['name'];
+        $comment=$row['comment'];
+        echo "<b> $comment_name</b><br/>  $comment<br/><br/>";
     }
-
     ?>
 </main>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

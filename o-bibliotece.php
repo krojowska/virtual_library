@@ -49,7 +49,7 @@ if(!isset($_SESSION['zalogowany']))
                 <!--                    </div>-->
                 <!--                </li>-->
                 <li class="nav-item">
-                    <a class="nav-link" href="moje-konto.php"> Moje konto </a>
+                    <a class="nav-link" href="opinie.php"> Opinie </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="godziny-otwarcia.php"> Godziny otwarcia </a>
